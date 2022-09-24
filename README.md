@@ -1,4 +1,4 @@
-Note from Gio: This project stems from MagicMirror2 and thus most code will be forked from their repo. CS Club will be importing 3rd party modules like face recognition, voice detection, Spotify implementation, etc... to make the smart mirror amazing.
+Note from Gio: This project stems from MagicMirror2 and thus most code will be forked from their repo. CS Club will be importing 3rd party modules like face recognition, voice detection, Spotify implementation, etc. to make the smart mirror decked out with cool features.
 
 ![MagicMirror²: The open source modular smart mirror platform. ](.github/header.png)
 
