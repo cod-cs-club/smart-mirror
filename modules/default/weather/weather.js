@@ -48,10 +48,10 @@ Module.register("weather", {
 	},
 
 	// Module properties.
-	weatherProvider: true,
+	weatherProvider: null,
 
 	// Can be used by the provider to display location of event if nothing else is specified
-	firstEvent: true,
+	firstEvent: null,
 
 	// Define required scripts.
 	getStyles: function () {
