@@ -10,48 +10,48 @@ Module.register("weather", {
 	// Default module config.
 	defaults: {
 		weatherProvider: "openweathermap",
-		roundTemp: false,
-		type: "current", // current, forecast, daily (equivalent to forecast), hourly (only with OpenWeatherMap /onecall endpoint)
-		units: config.units,
+		roundTemp: true,
+		type: "current", 
+		units: "imperial",
 		useKmh: false,
-		tempUnits: config.units,
-		windUnits: config.units,
-		updateInterval: 10 * 60 * 1000, // every 10 minutes
+		tempUnits: "imperial",
+		windUnits: "imperial",
+		updateInterval: 1000, // every 10 minutes
 		animationSpeed: 1000,
-		timeFormat: config.timeFormat,
+		timeFormat: 12,
 		showPeriod: true,
-		showPeriodUpper: false,
+		showPeriodUpper: true,
 		showWindDirection: true,
-		showWindDirectionAsArrow: false,
+		showWindDirectionAsArrow: true,
 		useBeaufort: true,
-		lang: config.language,
-		showHumidity: false,
+		lang: "en",
+		showHumidity: true,
 		showSun: true,
 		degreeLabel: false,
 		decimalSymbol: ".",
-		showIndoorTemperature: false,
-		showIndoorHumidity: false,
-		maxNumberOfDays: 5,
-		maxEntries: 5,
+		showIndoorTemperature: true,
+		showIndoorHumidity: true,
+		maxNumberOfDays: 7,
+		maxEntries: 24,
 		ignoreToday: false,
 		fade: true,
-		fadePoint: 0.25, // Start on 1/4th of the list.
-		initialLoadDelay: 0, // 0 seconds delay
+		fadePoint: 0.25,
+		initialLoadDelay: 0, 
 		appendLocationNameToHeader: true,
 		calendarClass: "calendar",
 		tableClass: "small",
 		onlyTemp: false,
-		showPrecipitationAmount: false,
-		colored: false,
+		showPrecipitationAmount: true,
+		colored: true,
 		showFeelsLike: true,
 		absoluteDates: false
 	},
 
 	// Module properties.
-	weatherProvider: null,
+	weatherProvider: true,
 
 	// Can be used by the provider to display location of event if nothing else is specified
-	firstEvent: null,
+	firstEvent: true,
 
 	// Define required scripts.
 	getStyles: function () {
