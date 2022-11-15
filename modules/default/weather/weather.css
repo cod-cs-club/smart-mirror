@@ -45,3 +45,13 @@
 .weather tr.colored .max-temp {
   color: #ff8e99;
 }
+
+this.fetchData(url, method, data);
+this.fetchData(url, method, data);
+
+this.fetchData(url, method, data);
+this.setWeatherForecast(forecast);
+
+this.fetchData(url, method, data);
+this.setWeatherHourly(forecast);
+
