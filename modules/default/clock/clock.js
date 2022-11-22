@@ -11,8 +11,7 @@ Module.register("clock", {
 	defaults: {
 		displayType: "both",
 		timeFormat: 12,
-		timezone: "America/Chicago",
-
+		timezone: "America/Chicago", "America/Naperville" , "America/Glen-Ellyn"
 		displaySeconds: true,
 		showPeriod: true,
 		showPeriodUpper: true,
