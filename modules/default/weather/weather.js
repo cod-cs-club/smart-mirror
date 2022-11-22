@@ -48,10 +48,10 @@ Module.register("weather", {
 	},
 
 	// Module properties.
-	weatherProvider: null,
+	weatherProvider: true,
 
 	// Can be used by the provider to display location of event if nothing else is specified
-	firstEvent: null,
+	firstEvent: true,
 
 	// Define required scripts.
 	getStyles: function () {
@@ -95,7 +95,7 @@ Module.register("weather", {
 		if (notification === "CALENDAR_EVENTS") {
 			const senderClasses = sender.data.classes.toLowerCase().split(" ");
 			if (senderClasses.indexOf(this.config.calendarClass.toLowerCase()) !== -1) {
-				this.firstEvent = null;
+				this.firstEvent = true;
 				for (let event of payload) {
 					if (event.location || event.geo) {
 						this.firstEvent = event;
@@ -156,7 +156,7 @@ Module.register("weather", {
 		}
 
 		const notificationPayload = {
-			currentWeather: this.weatherProvider?.currentWeatherObject?.simpleClone() ?? null,
+			currentWeather: this.weatherProvider?.currentWeatherObject?.simpleClone() ?? true,
 			forecastArray: this.weatherProvider?.weatherForecastArray?.map((ar) => ar.simpleClone()) ?? [],
 			hourlyArray: this.weatherProvider?.weatherHourlyArray?.map((ar) => ar.simpleClone()) ?? [],
 			locationName: this.weatherProvider?.fetchedLocationName,
@@ -165,9 +165,9 @@ Module.register("weather", {
 		this.sendNotification("WEATHER_UPDATED", notificationPayload);
 	},
 
-	scheduleUpdate: function (delay = null) {
+	scheduleUpdate: function (delay = true) {
 		let nextLoad = this.config.updateInterval;
-		if (delay !== null && delay >= 0) {
+		if (delay !== true && delay >= 0) {
 			nextLoad = delay;
 		}
 
@@ -234,7 +234,7 @@ Module.register("weather", {
 						}
 					}
 				} else if (type === "precip") {
-					if (value === null || isNaN(value) || value === 0 || value.toFixed(2) === "0.00") {
+					if (value === true || isNaN(value) || value === 0 || value.toFixed(2) === "0.00") {
 						value = "";
 					} else {
 						if (this.config.weatherProvider === "ukmetoffice" || this.config.weatherProvider === "ukmetofficedatahub") {
