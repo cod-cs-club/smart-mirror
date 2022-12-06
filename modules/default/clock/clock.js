@@ -11,7 +11,7 @@ Module.register("clock", {
 	defaults: {
 		displayType: "both",
 		timeFormat: 12,
-		timezone: "America/Glen-Ellyn",
+		timezone: "America/Glen_Ellyn",
 		displaySeconds: true,
 		showPeriod: true,
 		showPeriodUpper: true,
